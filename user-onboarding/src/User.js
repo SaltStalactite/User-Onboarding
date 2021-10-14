@@ -9,7 +9,10 @@ function User({ info }) {
     return (
         <div>
             <h3>{info.firstname}{info.lastname}</h3>
-            <pre>{JSON.stringify(info)}</pre>
+            <p>{info.first_name}{info.last_name}</p>
+            <p>Email: {info.email}</p>
+            <p>Password: {info.password}</p>
+            <p>ID: {info.id}</p>
         </div>
     )
 }
