@@ -30,4 +30,32 @@ describe('App refresh', () => {
         password().type('password')
             .should('have.value', 'password');
     })
+
+    it('can check the terms of service box', () => {
+        terms().should('exist');
+        terms().click();
+        terms().should('have.value', 'on')
+    })
+
+    it('can submit the form data', () => {
+        firstName().type('John');
+        lastName().type('Doe');
+        email().type('JohnDoe@mail.com');
+        password().type('password');
+        terms().click();
+        submit().click();
+        firstName().should('have.value', '');
+        lastName().should('have.value', '');
+        email().should('have.value', '');
+        password().should('have.value', '');
+    })
+
+    it('checks for form validation if an input is left empty', () => {
+        firstName().type('John');
+        lastName().type('Doe').clear();
+        email().type('JohnDoe@mail.com');
+        password().type('password');
+        terms().click();
+        cy.contains('Last Name is required').should('exist');
+    })
 })
