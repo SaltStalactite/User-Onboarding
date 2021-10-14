@@ -70,7 +70,7 @@ export default function UserForm(props) {
                     checked={values.terms}
                 />
             </label>
-            <button disabled={disabled}>submit</button>
+            <button disabled={disabled} id='submit'>submit</button>
         </form>
     )
 }
