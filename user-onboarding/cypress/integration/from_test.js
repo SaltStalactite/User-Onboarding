@@ -34,7 +34,7 @@ describe('App refresh', () => {
     it('can check the terms of service box', () => {
         terms().should('exist');
         terms().click();
-        terms().should('have.value', 'on')
+        terms().should('be.checked')
     })
 
     it('can submit the form data', () => {
