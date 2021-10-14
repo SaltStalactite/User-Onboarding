@@ -7,9 +7,9 @@ function User({ info }) {
     }
 
     return (
-        <div>
-            <h3>{info.firstname}{info.lastname}</h3>
-            <p>{info.first_name}{info.last_name}</p>
+        <div className='user'>
+            <h3>{info.firstname} {info.lastname}</h3>
+            <h3>{info.first_name} {info.last_name}</h3>
             <p>Email: {info.email}</p>
             <p>Password: {info.password}</p>
             <p>ID: {info.id}</p>
