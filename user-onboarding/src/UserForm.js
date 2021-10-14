@@ -22,7 +22,7 @@ export default function UserForm(props) {
 
     return (
         <form onSubmit={onSubmit}>
-            <h3>User Information</h3>
+            <h2>User Information</h2>
             <div>
                 <div>{errors.firstname}</div>
                 <div>{errors.lastname}</div>

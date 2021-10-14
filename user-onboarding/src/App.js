@@ -4,6 +4,7 @@ import UserForm from './UserForm';
 import axios from 'axios';
 import * as yup from 'yup';
 import schema from './Schema';
+import User from './User';
 
 const initialFormValues = {
   firstname: '',
@@ -97,6 +98,13 @@ function App() {
         disabled={disabled}
         errors={formErrors}
       />
+      {
+        users.map(user => {
+          return (
+            <User key={user.id} info={user} />
+          )
+        })
+      }
     </div>
   );
 }
